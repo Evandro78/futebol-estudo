@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Times</title>
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        /* Lista */
+        ul {
+            list-style: none;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Card */
+        li {
+            background: #ffffff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* Hover */
+        li:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Nome do time */
+        li strong {
+            font-size: 20px;
+            color: #2980b9;
+        }
+
+        /* Linha */
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>⚽ Times de Futebol</h1>
+
+    <ul>
+        {% for time in times %}
+            <li>
+                <strong>{{ time.nome }}</strong><br>
+                Cidade: {{ time.cidade }} <br>
+                Estádio: {{ time.estadio }} <br>
+                Fundação: {{ time.fundacao }}
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
