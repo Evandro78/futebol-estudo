@@ -31,7 +31,7 @@ A aplicação permite que o usuário administre os dados através do painel admi
 
 ---
 
-## ⚙️ Como o sistema funciona
+##  Como o sistema funciona
 
 ###  1. Model (Banco de Dados)
 
